@@ -1,0 +1,11 @@
+name = SSH key blacklist checking
+description = "Validates SSH keys using the ssh-vulnkey blacklist."
+core = 7.x
+dependencies[] = sshkey
+
+; Information added by Drupal.org packaging script on 2014-01-02
+version = "7.x-2.0+1-dev"
+core = "7.x"
+project = "sshkey"
+datestamp = "1388698706"
+

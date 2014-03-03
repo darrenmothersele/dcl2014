@@ -1,0 +1,6 @@
+name = SPARQL Feeds
+core = 7.x
+package = Feeds
+dependencies[] = feeds
+
+files[] = DBpediaFeedsHTTPFetcher.inc

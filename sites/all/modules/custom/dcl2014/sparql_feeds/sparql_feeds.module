@@ -1,0 +1,23 @@
+<?php
+
+
+function sparql_feeds_ctools_plugin_api($owner, $api) {
+  if ($owner == 'feeds' && $api == 'plugins') {
+    return array('version' => 1);
+  }
+}
+
+function sparql_feeds_feeds_plugins() {
+  $info = array();
+  $info['DBpedia'] = array(
+    'name' => 'DBpedia Fetcher',
+    'description' => 'Fetches data from DBpedia SPARQL endpoint',
+    'handler' => array(
+      'parent' => 'FeedsHTTPFetcher',
+      'class' => 'DBpediaFeedsHTTPFetcher',
+      'file' => 'DBpediaFeedsHTTPFetcher.inc',
+      'path' => drupal_get_path('module', 'sparql_feeds'),
+    ),
+  );
+  return $info;
+}
